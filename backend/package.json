@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Employee Record Managment System Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nimish1308/employee_record_system.git"
+  },
+  "keywords": [
+    "MERN",
+    "Stack"
+  ],
+  "author": "Nimish Shetye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nimish1308/employee_record_system/issues"
+  },
+  "homepage": "https://github.com/Nimish1308/employee_record_system#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.2",
+    "nodemon": "^3.1.10"
+  }
+}

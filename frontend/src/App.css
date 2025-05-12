@@ -1,0 +1,28 @@
+#gender_body{
+    display: flex;
+}
+
+#gender{
+    margin: 5px;
+}
+
+#btn_type{
+    margin: 5px;
+}
+
+
+table,thead,tbody{
+    text-align: center;
+}
+
+#btn_action{
+    margin: 5px;
+}
+
+#filter_btn{
+    margin: 3px;
+}
+
+#btn_page{
+    margin: 5px;
+}
