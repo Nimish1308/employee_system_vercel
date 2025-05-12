@@ -12,7 +12,7 @@ const Details = () => {
 
   const getRecord=async()=>{
    try {
-    const res=await axios.get(`http://localhost:5000/findbyid/${id}`);
+    const res=await axios.get(`https://employee-system-vercel-backend.vercel.app/findbyid/${id}`);
     const store=res.data;
     setRecord(store);
      calculateLastUpdated(store.lastUpdated); // Update the relative time

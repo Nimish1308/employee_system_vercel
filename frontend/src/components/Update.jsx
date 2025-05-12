@@ -42,7 +42,7 @@ const Update = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:5000/update/${id}`, input);
+      const res = await axios.put(`https://employee-system-vercel-backend.vercel.app/update/${id}`, input);
       console.log(`Employee Details Updated Successfully`);
       window.alert(`Employee Details Updated Successfully`);
       getRecord();
@@ -56,7 +56,7 @@ const Update = () => {
 
    const getRecord = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/findbyid/${id}`);
+        const res = await axios.get(`https://employee-system-vercel-backend.vercel.app/findbyid/${id}`);
         setInput({
           name: res.data.name,
           age: res.data.age,

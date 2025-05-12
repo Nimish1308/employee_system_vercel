@@ -80,7 +80,7 @@ const Record = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const res = await axios.post(`http://localhost:5000/create`, input);
+            const res = await axios.post(`https://employee-system-vercel-backend.vercel.app/create`, input);
             console.log(`Employee Details Added Successfully`);
             getRecord();
         } catch (error) {
@@ -92,7 +92,7 @@ const Record = () => {
 
     const getRecord = async () => {
         try {
-            const res = await axios.get(`http://localhost:5000/find`);
+            const res = await axios.get(`https://employee-system-vercel-backend.vercel.app/find`);
             const store = res.data;
             setRecord(store);
             setFilter(store);
@@ -107,7 +107,7 @@ const Record = () => {
     //Delete Record
     const handleDelete = async (id) => {
         try {
-            const res = await axios.delete(`http://localhost:5000/delete/${id}`);
+            const res = await axios.delete(`https://employee-system-vercel-backend.vercel.app/delete/${id}`);
             console.log(`Employee Record Deleted`);
             getRecord()
 

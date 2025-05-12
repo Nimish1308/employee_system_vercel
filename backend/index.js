@@ -19,26 +19,26 @@ const app = express();
 // }));
 
 const allowedOrigins = [
-    'https://employee-system-record-frontend.vercel.app',
+    'https://employee-system-vercel-frontend.vercel.app',
     'http://localhost:3000'
 ];
 
-// app.use(cors({
-//     origin: function (origin, callback) {
-//         if (!origin || allowedOrigins.includes(origin)) {
-//             callback(null, true);
-//         } else {
-//             console.warn(`CORS blocked for origin: ${origin}`);
-//             callback(null, false); // Don't throw, just deny
-//         }
-//     },
-//     credentials: true,
-//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-//     allowedHeaders: ['Content-Type', 'Authorization']
-// }));
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            console.warn(`CORS blocked for origin: ${origin}`);
+            callback(null, false); // Don't throw, just deny
+        }
+    },
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Must be before any route
-// app.options('*', cors()); // Handle preflight requests
+app.options('*', cors()); // Handle preflight requests
 
 
 app.use(cors())
